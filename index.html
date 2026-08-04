@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1d4ed8"><link rel="manifest" href="manifest.json">
+<title>ILAW TeachMate AI</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="logo">💡</span><div><b>ILAW TeachMate AI</b><small>Your AI-powered light for better teaching.</small></div></div></header>
+<main class="container">
+<section id="home" class="view active"><div class="hero"><h1>Good day, Teacher!</h1><p>Create teaching resources faster with the ILAW framework.</p></div>
+<div class="grid">
+<button class="card" onclick="show('lesson')"><span>📝</span><b>ILAW Lesson Plan</b><small>Create an editable ILAW lesson-plan draft.</small></button>
+<button class="card" onclick="show('quiz')"><span>🧠</span><b>AI Quiz Maker</b><small>Prepare questions and answer keys.</small></button>
+<button class="card" onclick="show('ppt')"><span>📊</span><b>PowerPoint Generator</b><small>Plan slide-by-slide presentation content.</small></button>
+<button class="card" onclick="show('resources')"><span>📚</span><b>My Resources</b><small>View saved lesson plans and materials.</small></button>
+</div></section>
+
+<section id="lesson" class="view"><button class="back" onclick="show('home')">← Home</button><h2>📝 ILAW Lesson Plan Generator</h2>
+<p class="muted">Enter your lesson details, then generate a structured draft for review.</p>
+<div class="form">
+<label>Grade Level<input id="grade" value="Grade 7"></label>
+<label>Learning Area / Subject<input id="subject" value="Mathematics"></label>
+<label>Curriculum<select id="curriculum"><option>MATATAG Curriculum</option><option>Other DepEd Curriculum</option><option>Custom School Template</option></select></label>
+<label>Quarter / Term<input id="quarter" placeholder="e.g., Quarter 1"></label>
+<label>Week / Date<input id="week" placeholder="e.g., Week 3 / August 4, 2026"></label>
+<label>Time Allotment<input id="duration" value="45 minutes"></label>
+<label>Topic<input id="topic" placeholder="e.g., Measures of Central Tendency"></label>
+<label>Learning Competency<textarea id="competency" placeholder="Enter the learning competency"></textarea></label>
+<label>Competency Code<input id="code" placeholder="Optional"></label>
+<label>Learning Resources<textarea id="resources" placeholder="Books, modules, slides, manipulatives, websites, etc."></textarea></label>
+<button class="primary" onclick="generateLesson()">✨ Generate ILAW Lesson Plan</button>
+</div><div id="output" class="output hidden"></div></section>
+
+<section id="quiz" class="view"><button class="back" onclick="show('home')">← Home</button><h2>🧠 AI Quiz Maker</h2><p class="muted">Prototype screen—live AI quiz generation can be connected through a secure backend.</p>
+<div class="form"><label>Grade Level<input placeholder="Grade 7"></label><label>Subject<input placeholder="Mathematics"></label><label>Topic<input placeholder="Topic"></label><label>Number of Questions<input type="number" value="10"></label><label>Question Type<select><option>Multiple Choice</option><option>True or False</option><option>Mixed</option></select></label><button class="primary" onclick="alert('Quiz Generator is ready for AI backend integration.')">Generate Quiz</button></div></section>
+
+<section id="ppt" class="view"><button class="back" onclick="show('home')">← Home</button><h2>📊 PowerPoint Generator</h2><p class="muted">Prototype screen—live PPTX generation can be connected through a secure backend.</p>
+<div class="form"><label>Grade Level<input placeholder="Grade 7"></label><label>Subject<input placeholder="Mathematics"></label><label>Topic<input placeholder="Topic"></label><label>Number of Slides<input type="number" value="12"></label><button class="primary" onclick="alert('PowerPoint Generator is ready for AI and PPTX backend integration.')">Generate Presentation</button></div></section>
+
+<section id="resources" class="view"><button class="back" onclick="show('home')">← Home</button><h2>📚 My Resources</h2><div id="saved"></div></section>
+</main>
+<nav class="bottom"><button onclick="show('home')">🏠<small>Home</small></button><button onclick="show('lesson')">📝<small>ILAW</small></button><button onclick="show('quiz')">🧠<small>Quiz</small></button><button onclick="show('resources')">📚<small>Resources</small></button></nav>
+<script src="app.js"></script></body></html>
