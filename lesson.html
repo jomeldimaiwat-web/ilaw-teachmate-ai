@@ -60,5 +60,25 @@
 
 </div>
 
+<script>
+function generateLessonPlan() {
+    document.getElementById("result").innerHTML = `
+        <h2>Generated Lesson Plan</h2>
+
+        <h3>Objectives</h3>
+        <ul>
+            <li>Cognitive: Students will understand the lesson.</li>
+            <li>Affective: Students will appreciate the topic.</li>
+            <li>Psychomotor: Students will participate actively.</li>
+        </ul>
+
+        <h3>Learning Activities</h3>
+        <p>Motivation → Discussion → Group Activity → Assessment → Assignment</p>
+
+        <h3>Assessment</h3>
+        <p>Short Quiz (10 items)</p>
+    `;
+}
+</script>
 </body>
 </html>
