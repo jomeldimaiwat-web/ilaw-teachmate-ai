@@ -8,9 +8,9 @@ document.body.innerHTML=`
 <h1>📝 ILAW Lesson Planner</h1>
 </header>
 
-<div style="padding:20px;">
+<div class="hero">
 
-<label>Grade Level</label><br>
+<label><b>Grade Level</b></label><br>
 <select id="grade">
 <option>Grade 7</option>
 <option>Grade 8</option>
@@ -20,22 +20,18 @@ document.body.innerHTML=`
 
 <br><br>
 
-<label>Subject</label><br>
-
-<input id="subject"
-placeholder="Example: Mathematics">
+<label><b>Subject</b></label><br>
+<input id="subject" placeholder="Example: Mathematics">
 
 <br><br>
 
-<label>Topic</label><br>
-
-<input id="topic"
-placeholder="Example: Ratio and Proportion">
+<label><b>Topic</b></label><br>
+<input id="topic" placeholder="Example: Ratio and Proportion">
 
 <br><br>
 
 <button onclick="generateLesson()">
-Generate Lesson Plan
+Generate ILAW Lesson Plan
 </button>
 
 </div>
@@ -46,54 +42,64 @@ return;
 
 }
 
-alert(feature+" Coming Soon!");
+alert(feature + " Coming Soon!");
 
 }
 
 function generateLesson(){
 
 let grade=document.getElementById("grade").value;
-
 let subject=document.getElementById("subject").value;
-
 let topic=document.getElementById("topic").value;
 
 document.body.innerHTML=`
 
-<div style="padding:20px;font-family:Arial">
+<header>
+<h1>Generated ILAW Lesson Plan</h1>
+</header>
 
-<h2>Generated Lesson Plan</h2>
+<div class="hero">
+
+<h2>${topic}</h2>
 
 <p><b>Grade:</b> ${grade}</p>
 
 <p><b>Subject:</b> ${subject}</p>
 
-<p><b>Topic:</b> ${topic}</p>
-
 <hr>
 
-<h3>Objective</h3>
+<h3>I - Learning Objectives</h3>
 
-Students will understand ${topic}.
+<ul>
+<li>Explain ${topic}</li>
+<li>Apply ${topic} in daily life</li>
+<li>Participate actively in class discussion</li>
+</ul>
 
-<h3>Learning Activities</h3>
+<h3>L - Learning Activities</h3>
 
-• Motivation
+<ul>
+<li>Prayer</li>
+<li>Review</li>
+<li>Motivation</li>
+<li>Lesson Proper</li>
+<li>Guided Practice</li>
+<li>Independent Practice</li>
+<li>Reflection</li>
+</ul>
 
-• Discussion
+<h3>A - Assessment</h3>
 
-• Guided Practice
+5-item formative quiz.
 
-• Independent Activity
+<h3>W - Wrap-up</h3>
 
-• Reflection
+Summarize the lesson and assign homework.
 
-<hr>
+<br><br>
 
 <button onclick="location.reload()">
-
-⬅ Back
-
+⬅ Back to Dashboard
 </button>
 
 </div>
