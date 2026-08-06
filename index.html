@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ILAW TeachMate AI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles.css">
+<title>ILAW TeachMate AI</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
 </head>
 
 <body>
 
-<header>
-    <h1>💡 ILAW TeachMate AI</h1>
-    <p>AI Teaching Assistant for DepEd Teachers</p>
+<header class="header">
+<h1>💡 ILAW TeachMate AI</h1>
+<p>AI Teaching Assistant for DepEd Teachers</p>
 </header>
 
-<main>
-
-<section class="hero">
+<main class="container">
 
 <h2>Welcome, Teacher!</h2>
 
-<p>Create lesson plans, quizzes, worksheets, and PowerPoint presentations in minutes.</p>
+<p>Select a tool below.</p>
 
-</section>
+<div class="grid">
 
-<section class="dashboard">
+<a href="lesson.html" class="card">
+📝
+<h3>Lesson Planner</h3>
+<p>Create complete ILAW lesson plans.</p>
+</a>
 
-<button onclick="window.location.href='less on.html'">
-📝 ILAW Lesson Planner
-</button>
+<a href="quiz.html" class="card">
+🧠
+<h3>Quiz Builder</h3>
+<p>Generate quizzes instantly.</p>
+</a>
 
-<button onclick="window.location.href='quiz html'">
-🧠 Quiz Builder
-</button>
+<a href="powerpoint.html" class="card">
+📊
+<h3>PowerPoint Builder</h3>
+<p>Create classroom presentations.</p>
+</a>
 
-<button onclick="window.location.href='powe rpoint.html'">
-📊 Presentation Builder
-</button>
+<a href="worksheet.html" class="card">
+📄
+<h3>Worksheet Builder</h3>
+<p>Create printable worksheets.</p>
+</a>
 
-<button onclick="showMessage('Worksheet Builder')">
-📄 Worksheet Builder
-</button>
+<a href="library.html" class="card">
+📚
+<h3>My Library</h3>
+<p>Save your generated files.</p>
+</a>
 
-<button onclick="showMessage('My Library')">
-📚 My Library
-</button>
+<a href="profile.html" class="card">
+👤
+<h3>Teacher Profile</h3>
+<p>Manage your account.</p>
+</a>
 
-<button onclick="showMessage('DepEd Resources')">
-📖 DepEd Resources
-</button>
-
-<button onclick="showMessage('Teacher Profile')">
-👤 Teacher Profile
-</button>
-
-<button onclick="showMessage('Settings')">
-⚙️ Settings
-</button>
-
-</section>
+</div>
 
 </main>
 
 <footer>
 
-<p>ILAW TeachMate AI v1.0</p>
+<p>ILAW TeachMate AI v2.0</p>
 
 </footer>
 
