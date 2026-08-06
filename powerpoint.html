@@ -9,36 +9,62 @@
 
 <body>
 
-<header>
-<h1>📊 PowerPoint Generator</h1>
+<header class="header">
+<h1>📊 AI PowerPoint Generator</h1>
+<p>Create presentation outlines instantly</p>
 </header>
 
-<div class="hero">
+<div class="container">
 
-<h2>Create a Presentation</h2>
+<label>Grade Level</label>
+<select>
+<option>Grade 7</option>
+<option>Grade 8</option>
+<option>Grade 9</option>
+<option>Grade 10</option>
+</select>
 
-<label>Subject</label><br>
+<label>Subject</label>
 <input type="text" placeholder="Mathematics">
 
-<br><br>
-
-<label>Topic</label><br>
+<label>Topic</label>
 <input type="text" placeholder="Ratio and Proportion">
 
-<br><br>
+<button onclick="generatePPT()">Generate Presentation</button>
 
-<label>Number of Slides</label><br>
-<input type="number" value="10">
+<div id="pptResult" class="hero" style="margin-top:20px;"></div>
 
-<br><br>
-
-<button>Generate PowerPoint</button>
-
-<br><br>
+<br>
 
 <a href="index.html">⬅ Back to Dashboard</a>
 
 </div>
+
+<script>
+function generatePPT(){
+
+document.getElementById("pptResult").innerHTML=`
+
+<h2>Presentation Outline</h2>
+
+<ol>
+<li>Title Slide</li>
+<li>Learning Objectives</li>
+<li>Motivation</li>
+<li>Lesson Proper</li>
+<li>Examples</li>
+<li>Group Activity</li>
+<li>Assessment</li>
+<li>Reflection</li>
+<li>Assignment</li>
+</ol>
+
+<p><b>Status:</b> Ready for future PPTX export.</p>
+
+`;
+
+}
+</script>
 
 </body>
 </html>
