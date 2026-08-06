@@ -9,36 +9,90 @@
 
 <body>
 
-<header>
-<h1>🧠 Quiz Builder</h1>
+<header class="header">
+<h1>🧠 AI Quiz Builder</h1>
+<p>Create quizzes in seconds</p>
 </header>
 
-<div class="hero">
+<div class="container">
 
-<h2>Create a Quiz</h2>
+<label>Grade Level</label>
+<select>
+<option>Grade 7</option>
+<option>Grade 8</option>
+<option>Grade 9</option>
+<option>Grade 10</option>
+</select>
 
-<label>Subject</label><br>
+<label>Subject</label>
 <input type="text" placeholder="Mathematics">
 
-<br><br>
-
-<label>Topic</label><br>
+<label>Topic</label>
 <input type="text" placeholder="Ratio and Proportion">
 
-<br><br>
-
-<label>Number of Questions</label><br>
+<label>Number of Questions</label>
 <input type="number" value="10">
 
-<br><br>
+<label>Question Type</label>
+<select>
+<option>Multiple Choice</option>
+<option>True or False</option>
+<option>Identification</option>
+<option>Mixed</option>
+</select>
 
-<button>Generate Quiz</button>
+<button onclick="generateQuiz()">Generate Quiz</button>
 
-<br><br>
+<div id="quizResult" class="hero" style="margin-top:20px;"></div>
+
+<br>
 
 <a href="index.html">⬅ Back to Dashboard</a>
 
 </div>
+
+<script>
+function generateQuiz(){
+
+document.getElementById("quizResult").innerHTML=`
+
+<h2>Sample Quiz</h2>
+
+<ol>
+
+<li>What is a ratio?
+<br><br>
+A. Comparison of two quantities
+<br>
+B. A polygon
+<br>
+C. A fraction only
+<br>
+D. An equation
+
+<br><br>
+
+<li>2:4 is equivalent to ________.
+
+<br><br>
+
+<li>True or False:
+Ratios compare two quantities.
+
+</ol>
+
+<h3>Answer Key</h3>
+
+1. A
+
+2. 1:2
+
+3. True
+
+`;
+
+}
+</script>
 
 </body>
 </html>
